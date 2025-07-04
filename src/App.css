@@ -1,8 +1,36 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff; /* your app background */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html, #root {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff; /* or your preferred bg */
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+}
+
+@media(min-width:440px) {
+html::-webkit-scrollbar {
+  display: none;
+}
 }
 
 .logo {

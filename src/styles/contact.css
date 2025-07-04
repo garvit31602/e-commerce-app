@@ -1,0 +1,17 @@
+.contact{
+     margin-left: 7rem;
+    margin-right: 7rem;
+}
+
+.contact-img{
+    width: auto;
+    height: 100%;
+}
+
+.main{
+    height: 22.3rem;
+}
+
+button {
+  border-radius: 0 !important;
+}
