@@ -16,6 +16,10 @@ div.offcanvas{
     z-index: 1030
 }
 
+.nav-item{
+  cursor: pointer;
+}
+
 h2{
     font-family: 'Montserrat';
 }
@@ -40,23 +44,16 @@ div.offcanvas{
 
 
 
-@media (max-width: 260px) {
+@media (max-width: 400px) {
   .full-name{
     font-size: 1.2rem;
   }
-  .navbar-toggler{
-    display: none;
-  }
-  .account {
-    width: 1rem;
-    height: 1rem;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1rem;
-  }
+ 
   nav.navbar{
-    padding: 0;
+    padding: 0 0 0 1rem !important;
+}
+.navbar-toggler{
+  padding-left: 0 !important;
 }
 }
 
@@ -133,3 +130,14 @@ li.nav-item .active {
 }
 
 }
+
+.search{
+  font-size: 1.2rem !important;
+  color: black;
+}
+
+.account{
+  font-size: 1rem;
+  font-size: 1rem;
+}
+

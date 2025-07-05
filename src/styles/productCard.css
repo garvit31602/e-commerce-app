@@ -22,3 +22,16 @@
    height: 2.4em;               /* 2 lines * line-height */
   margin-bottom: 0.5rem; 
 }
+
+@media (max-width: 576px) {
+  .card-body{
+    padding-bottom: 0;
+  }
+  .container{
+    padding: 0;
+  }
+  .row{
+    margin: 0;
+    padding: 0;
+  }
+}

@@ -9,11 +9,11 @@ function AboutUs(){
         <Navbar/>
         <div className="aboutus">
         <p className="text-center mt-5 pt-5 fs-3">ABOUT US &mdash;&mdash;</p>
-        <div className="d-flex my-5 main-sec align-items-center justify-content-center">
-        <div>
+        <div className="d-flex my-5 main-sec align-items-center justify-content-center align-items-stretch">
+        <div className="img-container">
             <img src='https://images.unsplash.com/photo-1571513800374-df1bbe650e56' className="abt-img"/>
         </div>
-        <div className="mx-5">
+        <div className="mx-5 text-wrap d-flex flex-column justify-content-center text-sec">
            <p> <span className="fw-bold">TailorMark</span> is where timeless craftsmanship meets modern sophistication. We specialize in refined fashion that fits like it was made just for you — because it is. From sharp formalwear to everyday essentials, TailorMark delivers tailored silhouettes that elevate your presence.</p>
 
 <p>Built on the values of precision, quality, and elegance, our collections blend classic tailoring with contemporary flair. Whether you're dressing for a boardroom or a celebration, TailorMark ensures you're always dressed to impress — with confidence stitched into every seam.</p>
@@ -25,8 +25,8 @@ function AboutUs(){
         </div>
         </div>
         <p className="mt-5 pt-5 fs-5">WHY CHOOSE US &mdash;&mdash;</p>
-        <div className="d-flex align-items-center box-sec mb-5">
-<div className="border border-secondary-subtle px-5 py-5 box">
+        <div className="d-flex flex-wrap justify-content-center align-items-stretch box-sec mb-5">
+<div className="border border-secondary-subtle px-5 py-5 box ">
     <p className="fw-bold">Tailored to Perfection:</p>
     <div>
         At TailorMark, every piece is a tribute to craftsmanship. From sleek blazers to structured bodycon fits, our garments are designed to complement your silhouette with precision and poise.

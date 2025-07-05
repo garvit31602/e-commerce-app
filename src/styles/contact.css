@@ -4,9 +4,15 @@
 }
 
 .contact-img{
+    max-width: 500px;
     width: auto;
     height: 100%;
 }
+
+.form-sec{
+     min-width: '300px';
+      max-width: '600px' ;
+    }
 
 .main{
     height: 22.3rem;
@@ -14,4 +20,18 @@
 
 button {
   border-radius: 0 !important;
+}
+
+.btn-custom{
+    height: 3rem;
+}
+
+@media(max-width: 640px){
+    .contact{
+        margin-left: 1rem !important;
+        margin-right: 1rem !important;
+    }
+    div.col-12{
+        padding-left: 0 !important;
+    }
 }
