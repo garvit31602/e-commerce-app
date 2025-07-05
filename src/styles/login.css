@@ -19,3 +19,25 @@
 .span-sec{
     height: 10%;
 }
+
+form{
+    width: 20rem;
+    height: 15rem;
+}
+
+@media (max-width: 576px) {
+    #box{
+        margin-top: 2rem;
+        height: 20rem;
+    }
+    form{
+        width: 15rem;
+        height: 12rem;
+    }
+    #login{
+        font-size: 1.5rem;
+    }
+    .small{
+        font-size: 0.8rem;
+    }
+}

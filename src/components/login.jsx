@@ -8,7 +8,7 @@ function Login(){
         <Navbar/>
          <div id="box">
         <h2 id="login">Login</h2>
-            <form className="w-25 mt-3">
+            <form className="mt-3">
   <div className="mb-3">
     <input type="email" className="form-control border border-dark" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" autoComplete='off'/>
   </div>

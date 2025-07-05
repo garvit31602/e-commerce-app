@@ -20,16 +20,16 @@ const [hoverBag, setHoverBag] = useState(false);
       <div className="offcanvas-body">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0 text-uppercase fw-bold flex-grow-1 justify-content-center">
         <li className="nav-item">
-          <NavLink to="/" className="nav-link text-dark" activeclassname="active">Home</NavLink>
+          <NavLink to="/" className="nav-link text-dark mx-2" activeclassname="active">Home</NavLink>
         </li>
         <li className="nav-item">
-          <NavLink to="/collections" className="nav-link text-dark" activeclassname="active">Collection</NavLink>
+          <NavLink to="/collections" className="nav-link text-dark mx-2" activeclassname="active">Collection</NavLink>
         </li>
         <li className="nav-item">
-          <NavLink to="/aboutus" className="nav-link text-dark" aactiveclassname="active">About</NavLink>
+          <NavLink to="/aboutus" className="nav-link text-dark mx-2" aactiveclassname="active">About</NavLink>
         </li>
         <li className="nav-item">
-          <NavLink to="/contact" className="nav-link text-dark" activeclassname="active">Contact</NavLink>
+          <NavLink to="/contact" className="nav-link text-dark mx-2" activeclassname="active">Contact</NavLink>
         </li>
       </ul>
       </div>
