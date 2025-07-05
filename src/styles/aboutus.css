@@ -42,6 +42,19 @@
   word-break: break-word;
 }
 
+.libertinus-math-regular {
+  font-family: "Libertinus Math", system-ui;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.parastoo{
+  font-family: "Parastoo", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 1.3rem;
+}
+
 
 @media(max-width:776px){
     .main-sec{

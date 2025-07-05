@@ -34,4 +34,10 @@ button {
     div.col-12{
         padding-left: 0 !important;
     }
+    .git{
+        font-size: medium !important;
+    }
+    .textarea{
+        height: 5rem;
+    }
 }

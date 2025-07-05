@@ -13,7 +13,7 @@ function Contactus(){
       <div className="container my-5">
   <div className="row align-items-stretch">
     {/* Left Side: Image */}
-    <div className="col-12 col-md-6 d-flex">
+    <div className="col-12 col-md-6 d-flex px-0">
       <img
         src={image}
         className="img-fluid w-100 h-100 object-fit-cover rounded"
@@ -23,8 +23,8 @@ function Contactus(){
     </div>
 
     {/* Right Side: Form */}
-    <div className="col-12 col-md-6 d-flex flex-column justify-content-center px-4 flex-wrap">
-      <p className="fs-5 fw-semibold">Get in Touch</p>
+    <div className="col-12 col-md-6 d-flex flex-column justify-content-center px-2 flex-wrap">
+      <p className="fs-5 fw-semibold mt-5 mb-0 git">Get in Touch</p>
       <form className="mt-3 w-100">
         <div className="mb-3">
           <input
@@ -44,7 +44,7 @@ function Contactus(){
         </div>
         <div className="mb-3">
           <textarea
-            className="form-control border border-dark"
+            className="form-control border border-dark textarea"
             placeholder="Your Message"
             rows="5"
           />

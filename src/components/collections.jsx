@@ -77,8 +77,8 @@ function Collections(){
       </div>
       </div>
       <div>
-        <div className="d-flex align-items-end justify-content-between mb-3">
-      <p className="fs-3 px-3 fw-semibold mt-5 mb-0">ALL COLLECTIONS &mdash;</p>
+        <div className="d-flex align-items-end justify-content-between px-3 mb-2">
+      <p className="fs-3 fw-semibold mt-5 mb-0 ac">ALL COLLECTIONS &mdash;</p>
       <div className="dropdown">
   <button className="btn btn-outline border  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
       Sort by
