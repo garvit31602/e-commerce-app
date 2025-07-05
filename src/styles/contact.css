@@ -3,10 +3,10 @@
     margin-right: 7rem;
 }
 
-.contact-img{
-    max-width: 500px;
-    width: auto;
-    height: 100%;
+.contact-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 .form-sec{

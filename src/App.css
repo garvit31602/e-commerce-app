@@ -14,15 +14,14 @@
 body, html, #root {
   width: 100%;
   box-sizing: border-box;
-  padding: 0;
+  padding: 0 !important;
+  overflow: auto;
 }
 
 html, body {
   margin: 0;
   padding: 0;
   background-color: #fff; /* or your preferred bg */
-  height: 100vh;
-  width: 100vw;
 }
 
 .logo {

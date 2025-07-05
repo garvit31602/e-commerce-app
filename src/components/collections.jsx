@@ -79,14 +79,14 @@ function Collections(){
       <div>
         <div className="d-flex align-items-end justify-content-between mb-3">
       <p className="fs-3 px-3 fw-semibold mt-5 mb-0">ALL COLLECTIONS &mdash;</p>
-      <div class="dropdown">
-  <button class="btn btn-outline border  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <div className="dropdown">
+  <button className="btn btn-outline border  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
       Sort by
   </button>
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#">Relevance</a></li>
-    <li><a class="dropdown-item" href="#">Price: Low to High</a></li>
-    <li><a class="dropdown-item" href="#">Price: Hight to low</a></li>
+  <ul className="dropdown-menu">
+    <li><a className="dropdown-item" href="#">Relevance</a></li>
+    <li><a className="dropdown-item" href="#">Price: Low to High</a></li>
+    <li><a className="dropdown-item" href="#">Price: Hight to low</a></li>
   </ul>
 </div>
 </div>

@@ -17,25 +17,25 @@ const [hoverBag, setHoverBag] = useState(false);
       <div className="offcanvas-header">
         <button type="button" className="btn-close me-0" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
-      <div className="offcanvas-body">
+      <div className="offcanvas-body mx-2">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0 text-uppercase fw-bold flex-grow-1 justify-content-center">
         <li className="nav-item">
-          <NavLink to="/" className="nav-link text-dark mx-2" activeclassname="active">Home</NavLink>
+          <NavLink to="/" className="nav-link text-dark" activeclassname="active">Home</NavLink>
         </li>
         <li className="nav-item">
-          <NavLink to="/collections" className="nav-link text-dark mx-2" activeclassname="active">Collection</NavLink>
+          <NavLink to="/collections" className="nav-link text-dark" activeclassname="active">Collection</NavLink>
         </li>
         <li className="nav-item">
-          <NavLink to="/aboutus" className="nav-link text-dark mx-2" aactiveclassname="active">About</NavLink>
+          <NavLink to="/aboutus" className="nav-link text-dark" aactiveclassname="active">About</NavLink>
         </li>
         <li className="nav-item">
-          <NavLink to="/contact" className="nav-link text-dark mx-2" activeclassname="active">Contact</NavLink>
+          <NavLink to="/contact" className="nav-link text-dark" activeclassname="active">Contact</NavLink>
         </li>
       </ul>
       </div>
 </div>
 <div className="nav-item mx-2">
-  <i class="bi bi-search search"></i>
+  <i className="bi bi-search search"></i>
 </div>
       <Link to="/login" className="text-dark text-decoration-none">
         <div className="nav-item mx-2">
