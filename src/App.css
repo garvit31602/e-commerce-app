@@ -26,9 +26,10 @@ html, body {
   position: absolute;
 }
 
-
+@media(min-width:440px) {
 html::-webkit-scrollbar {
   display: none;
+}
 }
 
 .logo {

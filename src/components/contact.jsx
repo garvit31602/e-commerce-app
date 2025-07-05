@@ -9,7 +9,7 @@ function Contactus(){
         <>
         <Navbar/>
         <div className="contact">
-         <p className="text-center mt-5 pt-5 fs-3">CONTACT US &mdash;&mdash;</p>
+         <p className="text-center mt-5 pt-5 fs-3">CONTACT US &mdash;</p>
       <div className="container my-5">
   <div className="row align-items-stretch flex-column flex-md-row">
             <div className="col-12 col-md-6 d-flex">

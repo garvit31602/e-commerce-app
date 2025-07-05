@@ -37,7 +37,7 @@ function Collections(){
       <Navbar/>
       <div className="home d-flex flex-column flex-md-row">
       <div>
-      <p className="fs-5 mt-5">FILTERS</p>
+      <p className="fs-5 mt-5 fw-semibold">FILTERS</p>
 <div className="border cat mb-3">
         <div className="d-flex flex-column gap-1 p-3">
           

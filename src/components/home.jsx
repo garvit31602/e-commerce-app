@@ -50,7 +50,7 @@ function Home(){
             </div>
         </div>
         <div className='mt-5 text-center'>
-            <h2>LATEST COLLECTIONS &mdash;&mdash;</h2>
+            <h2>LATEST COLLECTIONS &mdash;</h2>
             <p className='text-secondary fw-medium'>Tailormark’s latest collection is where elegance meets trend. Fashion that speaks your style.</p>
         </div>
         <div className='container'>
@@ -64,7 +64,7 @@ function Home(){
         </div>
       </div>
        <div className='mt-4 text-center'>
-      <h2>BEST SELLERS &mdash;&mdash;</h2>  
+      <h2>BEST SELLERS &mdash;</h2>  
  <p className='text-secondary fw-medium'>Our best seller — loved by many, styled by all. Elevate your look with timeless charm.</p>
     </div>
     <div className='container'>

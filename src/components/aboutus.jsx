@@ -8,7 +8,7 @@ function AboutUs(){
         <div>
         <Navbar/>
         <div className="aboutus">
-        <p className="text-center mt-5 pt-5 fs-3">ABOUT US &mdash;&mdash;</p>
+        <p className="text-center mt-5 pt-5 fs-3">ABOUT US &mdash;</p>
         <div className="d-flex my-5 main-sec align-items-center justify-content-center align-items-stretch">
         <div className="img-container">
             <img src='https://images.unsplash.com/photo-1571513800374-df1bbe650e56' className="abt-img"/>
