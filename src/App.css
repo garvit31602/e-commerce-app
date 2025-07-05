@@ -26,12 +26,6 @@ html, body {
   position: absolute;
 }
 
-@media(min-width:440px) {
-html::-webkit-scrollbar {
-  display: none;
-}
-}
-
 .logo {
   height: 6em;
   padding: 1.5em;
