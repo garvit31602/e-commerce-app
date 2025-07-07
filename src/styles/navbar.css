@@ -13,7 +13,6 @@ div.offcanvas{
 
 .navbar{
     height: 5rem;
-    z-index: 1030
 }
 
 .nav-item{
@@ -121,12 +120,6 @@ li.nav-item .active {
 .nav-link.active::before {
   width: 100%;
   visibility: visible;
-}
-
-.navbar{
-  position: sticky;
-  top: 0;
-  z-index: 1030;
 }
 
 }

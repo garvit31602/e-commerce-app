@@ -8,7 +8,7 @@ function AboutUs(){
         <div>
         <Navbar/>
         <div className="aboutus">
-        <p className="text-center mt-5 pt-5 fs-3">ABOUT US &mdash;</p>
+        <p className="text-center mt-5 pt-5 fs-3">ABOUT US <span className='line'></span></p>
         <div className="d-flex my-5 main-sec align-items-center justify-content-center align-items-stretch">
         <div className="img-container">
             <img src='https://images.unsplash.com/photo-1571513800374-df1bbe650e56' className="abt-img"/>
@@ -24,7 +24,7 @@ function AboutUs(){
 
         </div>
         </div>
-        <p className="mt-5 pt-5 fs-5">WHY CHOOSE US &mdash;</p>
+        <p className="mt-5 pt-5 fs-5">WHY CHOOSE US <span className='line'></span></p>
         <div className="d-flex flex-wrap justify-content-center align-items-stretch box-sec mb-5">
 <div className="border border-secondary-subtle px-5 py-5 box ">
     <p className="fw-bold">Tailored to Perfection:</p>

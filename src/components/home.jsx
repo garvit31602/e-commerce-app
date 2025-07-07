@@ -35,22 +35,22 @@ function Home(){
   }, []);
 
     return(
-        <div id="root" className="d-flex flex-column min-vh-100">
+        <div id="root" className="d-flex flex-column">
         <Navbar/>
          <main className="flex-grow-1 home">
            <div className='d-flex flex-wrap border-dark border-end border-start border-bottom  align-items-stretch'>
           <div className='text-block my-5 px-4 d-flex flex-column justify-content-center ms-auto libre-baskerville-regular'>
 
-                <span className='fs-5'>&mdash; OUR BESTSELLERS</span>
+                <span className='fs-5 text-start'><span className='line'></span> OUR BESTSELLERS</span>
                 <span className='big-title text-center'>TailorMark Arrivals</span>
-                <span className='fs-5'>SHOP NOW &mdash;</span>
+                <span className='fs-5'>SHOP NOW <span className='line'></span></span>
             </div>
             <div className='img-div ms-auto'>
             <img src={image} className='carousel-img'/>
             </div>
         </div>
         <div className='mt-5 text-center'>
-            <h2>LATEST COLLECTIONS &mdash;</h2>
+            <h2>LATEST COLLECTIONS <span className='line'></span></h2>
             <p className='text-secondary fw-medium'>Tailormark’s latest collection is where elegance meets trend. Fashion that speaks your style.</p>
         </div>
         <div className='container'>
@@ -64,7 +64,7 @@ function Home(){
         </div>
       </div>
        <div className='mt-4 text-center'>
-      <h2>BEST SELLERS &mdash;</h2>  
+      <h2>BEST SELLERS <span className='line'></span></h2>  
  <p className='text-secondary fw-medium'>Our best seller — loved by many, styled by all. Elevate your look with timeless charm.</p>
     </div>
     <div className='container'>

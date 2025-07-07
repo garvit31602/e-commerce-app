@@ -38,10 +38,20 @@ function Collections(){
       <div className="home d-flex flex-column flex-md-row">
       <div>
       <p className="fs-5 mt-5 fw-semibold">FILTERS</p>
-<div className="border cat mb-3">
+
+      <div class="accordion" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        <p className="mb-0 fw-semibold me-3">CATEGORIES</p>
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+
+
         <div className="d-flex flex-column gap-1 p-3">
-          
-<p className="mb-0 fw-semibold">CATEGORIES</p>
+        
         <label>
         <input type="checkbox" id="men" name="category" value="men" className="me-1"/>
         <small>Men</small>
@@ -55,12 +65,20 @@ function Collections(){
         <input type="checkbox" id="kids" name="category" value="kids" className="me-1"/>
         <small>Kids</small>
         </label>
-        </div>
+  
       </div>
-       
-       <div className="border cat">
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        <p className="mb-0 fw-semibold">TYPE</p>
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
         <div className="d-flex flex-column gap-1 p-3">
-<p className="mb-0 fw-semibold">Type</p>
         <label>
         <input type="checkbox" id="men" name="category" value="men" className="me-1"/>
        <small>Topwear</small>
@@ -75,10 +93,13 @@ function Collections(){
         </label>
         </div>
       </div>
+    </div>
+  </div>
+</div>
       </div>
       <div>
         <div className="d-flex align-items-end justify-content-between px-3 mb-2">
-      <p className="fs-3 fw-semibold mt-5 mb-0 ac">ALL COLLECTIONS &mdash;</p>
+      <p className="fs-3 fw-semibold mt-5 mb-0 ac">ALL COLLECTIONS <span className='line'></span></p>
       <div className="dropdown">
   <button className="btn btn-outline border  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
       Sort by

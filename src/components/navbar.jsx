@@ -7,8 +7,8 @@ function Navbar() {
      const [hoverPerson, setHoverPerson] = useState(false);
 const [hoverBag, setHoverBag] = useState(false);
   return (
-   <nav className="navbar top navbar-expand-lg bg-light w-100">
-  <div className="container-fluid">
+   <nav className="navbar sticky-top navbar-expand-lg bg-light w-100">
+  <div className="container-fluid me-3">
     <Link to='/' className='text-decoration-none navbar-brand me-auto'>
       <h2 className="full-name">TailorMark</h2>
     </Link>
@@ -17,7 +17,7 @@ const [hoverBag, setHoverBag] = useState(false);
       <div className="offcanvas-header">
         <button type="button" className="btn-close me-0" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
-      <div className="offcanvas-body mx-2">
+      <div className="offcanvas-body">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0 text-uppercase fw-bold flex-grow-1 justify-content-center">
         <li className="nav-item">
           <NavLink to="/" className="nav-link text-dark" activeclassname="active">Home</NavLink>

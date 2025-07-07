@@ -9,7 +9,7 @@ function Contactus(){
         <>
         <Navbar/>
         <div className="contact">
-         <p className="text-center mt-5 pt-5 fs-3">CONTACT US &mdash;</p>
+         <p className="text-center mt-5 pt-5 fs-3">CONTACT US <span className='line'></span></p>
       <div className="container my-5">
   <div className="row align-items-stretch">
     {/* Left Side: Image */}
@@ -23,8 +23,8 @@ function Contactus(){
     </div>
 
     {/* Right Side: Form */}
-    <div className="col-12 col-md-6 d-flex flex-column justify-content-center px-2 flex-wrap">
-      <p className="fs-5 fw-semibold mt-5 mb-0 git">Get in Touch</p>
+    <div className="col-12 col-md-6 d-flex flex-column justify-content-center px-3 flex-wrap mt-5 mt-lg-0">
+      <p className="fs-5 fw-semibold mb-0 git">Get in Touch</p>
       <form className="mt-3 w-100">
         <div className="mb-3">
           <input
