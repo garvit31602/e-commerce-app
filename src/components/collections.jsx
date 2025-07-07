@@ -47,27 +47,20 @@ function Collections(){
       </button>
     </h2>
     <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-
-
-        <div className="d-flex flex-column gap-1 p-3">
-        
-        <label>
-        <input type="checkbox" id="men" name="category" value="men" className="me-1"/>
-        <small>Men</small>
-        
-        </label>
-        <label>
-        <input type="checkbox" id="women" name="category" value="women" className="me-1"/>
-       <small>Women</small>
-        </label>
-        <label>
-        <input type="checkbox" id="kids" name="category" value="kids" className="me-1"/>
-        <small>Kids</small>
-        </label>
-  
-      </div>
-      </div>
+<ul class="list-group">
+  <li class="list-group-item">
+    <input class="form-check-input me-2" type="checkbox" value="" id="firstCheckbox"/>
+    <label class="form-check-label" for="firstCheckbox">Men</label>
+  </li>
+  <li class="list-group-item">
+    <input class="form-check-input me-2" type="checkbox" value="" id="secondCheckbox"/>
+    <label class="form-check-label" for="secondCheckbox">Women</label>
+  </li>
+  <li class="list-group-item">
+    <input class="form-check-input me-2" type="checkbox" value="" id="thirdCheckbox"/>
+    <label class="form-check-label" for="thirdCheckbox">Kids</label>
+  </li>
+</ul>
     </div>
   </div>
   <div class="accordion-item">
@@ -77,22 +70,20 @@ function Collections(){
       </button>
     </h2>
     <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <div className="d-flex flex-column gap-1 p-3">
-        <label>
-        <input type="checkbox" id="men" name="category" value="men" className="me-1"/>
-       <small>Topwear</small>
-        </label>
-        <label>
-        <input type="checkbox" id="women" name="category" value="women" className="me-1"/>
-        <small>Bottomwear</small>
-        </label>
-        <label>
-        <input type="checkbox" id="kids" name="category" value="kids" className="me-1"/>
-        <small>Winterwear</small>
-        </label>
-        </div>
-      </div>
+      <ul class="list-group">
+  <li class="list-group-item">
+    <input class="form-check-input me-2" type="checkbox" value="" id="firstCheckbox"/>
+    <label class="form-check-label" for="firstCheckbox">Topwear</label>
+  </li>
+  <li class="list-group-item">
+    <input class="form-check-input me-2" type="checkbox" value="" id="secondCheckbox"/>
+    <label class="form-check-label" for="secondCheckbox">Bottomwear</label>
+  </li>
+  <li class="list-group-item">
+    <input class="form-check-input me-2" type="checkbox" value="" id="thirdCheckbox"/>
+    <label class="form-check-label" for="thirdCheckbox">Winterwear</label>
+  </li>
+</ul>
     </div>
   </div>
 </div>
