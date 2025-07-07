@@ -39,49 +39,49 @@ function Collections(){
       <div>
       <p className="fs-5 mt-5 fw-semibold">FILTERS</p>
 
-      <div class="accordion" id="accordionExample">
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+      <div className="accordion" id="accordionExample">
+  <div className="accordion-item">
+    <h2 className="accordion-header">
+      <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
         <p className="mb-0 fw-semibold me-3">CATEGORIES</p>
       </button>
     </h2>
-    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-<ul class="list-group">
-  <li class="list-group-item">
-    <input class="form-check-input me-2" type="checkbox" value="" id="firstCheckbox"/>
-    <label class="form-check-label" for="firstCheckbox">Men</label>
+    <div id="collapseOne" className="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+<ul className="list-group">
+  <li className="list-group-item">
+    <input className="form-check-input me-2" type="checkbox" value="" id="firstCheckbox"/>
+    <label className="form-check-label" htmlFor="firstCheckbox">Men</label>
   </li>
-  <li class="list-group-item">
-    <input class="form-check-input me-2" type="checkbox" value="" id="secondCheckbox"/>
-    <label class="form-check-label" for="secondCheckbox">Women</label>
+  <li className="list-group-item">
+    <input className="form-check-input me-2" type="checkbox" value="" id="secondCheckbox"/>
+    <label className="form-check-label" htmlFor="secondCheckbox">Women</label>
   </li>
-  <li class="list-group-item">
-    <input class="form-check-input me-2" type="checkbox" value="" id="thirdCheckbox"/>
-    <label class="form-check-label" for="thirdCheckbox">Kids</label>
+  <li className="list-group-item">
+    <input className="form-check-input me-2" type="checkbox" value="" id="thirdCheckbox"/>
+    <label className="form-check-label" htmlFor="thirdCheckbox">Kids</label>
   </li>
 </ul>
     </div>
   </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+  <div className="accordion-item">
+    <h2 className="accordion-header">
+      <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
         <p className="mb-0 fw-semibold">TYPE</p>
       </button>
     </h2>
-    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-      <ul class="list-group">
-  <li class="list-group-item">
-    <input class="form-check-input me-2" type="checkbox" value="" id="firstCheckbox"/>
-    <label class="form-check-label" for="firstCheckbox">Topwear</label>
+    <div id="collapseTwo" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <ul className="list-group">
+  <li className="list-group-item">
+    <input className="form-check-input me-2" type="checkbox" value="" id="firstCheckbox"/>
+    <label className="form-check-label" htmlFor="firstCheckbox">Topwear</label>
   </li>
-  <li class="list-group-item">
-    <input class="form-check-input me-2" type="checkbox" value="" id="secondCheckbox"/>
-    <label class="form-check-label" for="secondCheckbox">Bottomwear</label>
+  <li className="list-group-item">
+    <input className="form-check-input me-2" type="checkbox" value="" id="secondCheckbox"/>
+    <label className="form-check-label" htmlFor="secondCheckbox">Bottomwear</label>
   </li>
-  <li class="list-group-item">
-    <input class="form-check-input me-2" type="checkbox" value="" id="thirdCheckbox"/>
-    <label class="form-check-label" for="thirdCheckbox">Winterwear</label>
+  <li className="list-group-item">
+    <input className="form-check-input me-2" type="checkbox" value="" id="thirdCheckbox"/>
+    <label className="form-check-label" htmlFor="thirdCheckbox">Winterwear</label>
   </li>
 </ul>
     </div>

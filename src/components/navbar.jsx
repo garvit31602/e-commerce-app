@@ -7,7 +7,7 @@ function Navbar() {
      const [hoverPerson, setHoverPerson] = useState(false);
 const [hoverBag, setHoverBag] = useState(false);
   return (
-   <nav className="navbar sticky-top navbar-expand-lg bg-light w-100">
+   <nav className="navbar top navbar-expand-lg bg-light w-100">
   <div className="container-fluid me-3">
     <Link to='/' className='text-decoration-none navbar-brand me-auto'>
       <h2 className="full-name">TailorMark</h2>
@@ -53,7 +53,7 @@ const [hoverBag, setHoverBag] = useState(false);
             onMouseLeave={() => setHoverBag(false)}
           ></i>
           </div>
-    <button className="navbar-toggler border border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+    <button className="navbar-toggler border border-0 pe-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
   </div>
