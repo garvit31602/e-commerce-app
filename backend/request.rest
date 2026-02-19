@@ -1,0 +1,32 @@
+GET http://localhost:3000/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiR2Fydml0IiwiaWF0IjoxNzUyMDEyNDk4LCJleHAiOjE3NTIwMTI1NDN9.rLfh5Fgg7mSkkNHzWKxjFd-xkO5zVD2yTsDVhw7ZeKc
+
+###
+POST http://localhost:3000/token
+Content-Type: application/json
+
+{
+    "token":
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiR2Fydml0IiwiaWF0IjoxNzUyMDEyODg4fQ.8oau0FYvJ5i6UE5TMYJQZWfwkIjxkdRgiUMTpOeNIiI"
+}
+
+###
+
+GET http://localhost:3000/products
+
+###
+DELETE  http://localhost:3000/logout
+Content-Type: application/json
+
+{
+    "token":
+   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiR2Fydml0IiwiaWF0IjoxNzUyMDEyODg4fQ.8oau0FYvJ5i6UE5TMYJQZWfwkIjxkdRgiUMTpOeNIiI"
+}
+
+###
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "username":"Garvit"
+}
