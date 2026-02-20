@@ -55,30 +55,23 @@ function ProductCard({ product, onAlert }) {
   return (
     <div className="card px-0 py-0 border border-0">
       <a href={product.url} target="_blank" rel="noopener noreferrer" className="text-decoration-none text-dark">
-        <div className="hover-zoom-wrapper rounded overflow-hidden">
-          {/*
+        <div className="hover-zoom-wrapper rounded overflow-hidden"
+          onMouseEnter={() => setHovering(true)}
+          onMouseLeave={() => {
+            setHovering(false);
+            setIndex(0); // reset to first image when hover ends
+          }}
+        >
+          <img src={product.images[index]} alt={product.title} className="hover-zoom w-100" />
           <button disabled={loading}
             onClick={(e) => {
               e.preventDefault();
-
               saveCartToLocalStorage();
             }}
-            className="btn btn-primary"
+            className="btn btn-dark add-to-cart-btn"
           >
             {loading ? 'Saving...' : 'Add to Cart'}
           </button>
-          */}
-          <div
-            onMouseEnter={() => setHovering(true)}
-            onMouseLeave={() => {
-              setHovering(false);
-              setIndex(0); // reset to first image when hover ends
-            }}
-            className="w-48 h-48 overflow-hidden rounded border"
-          >
-
-            <img src={product.images[index]} alt={product.title} className="hover-zoom w-100" />
-          </div>
         </div>
         <div className="card-body text-start px-0">
           <h5 className="card-title fs-6">{product.product_description}</h5>
@@ -87,8 +80,8 @@ function ProductCard({ product, onAlert }) {
             <p className="card-text text-secondary text-decoration-line-through">Rs.{Number(product.initial_price.replace(/[^\d.]/g, "")).toLocaleString()}</p>
           </div>
         </div>
-      </a>
-    </div>
+      </a >
+    </div >
   );
 }
 

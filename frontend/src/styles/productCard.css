@@ -1,36 +1,64 @@
-.card{
-    cursor: pointer;
-    overflow: hidden;
+.card {
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.hover-zoom-wrapper {
+  position: relative;
+  overflow: hidden;
 }
 
 .hover-zoom {
   transition: transform 0.3s ease-in-out;
+  display: block;
 }
 
-.hover-zoom:hover{
-      transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-
+.hover-zoom-wrapper:hover .hover-zoom {
+  transform: scale(1.05);
 }
 
-.card-title{
-     display: -webkit-box;
-  -webkit-line-clamp: 2; /* Limit to 2 lines */
+.add-to-cart-btn {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  white-space: nowrap;
+  font-size: 0.85rem;
+  padding: 8px 16px;
+  border-radius: 50px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.hover-zoom-wrapper:hover .add-to-cart-btn {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.card-title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  /* Limit to 2 lines */
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-   height: 2.4em;               /* 2 lines * line-height */
-  margin-bottom: 0.5rem; 
+  height: 2.4em;
+  /* 2 lines * line-height */
+  margin-bottom: 0.5rem;
 }
 
 @media (max-width: 576px) {
-  .card-body{
+  .card-body {
     padding-bottom: 0;
   }
-  .container{
+
+  .container {
     padding: 0;
   }
-  .row{
+
+  .row {
     margin: 0;
     padding: 0;
   }

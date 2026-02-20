@@ -1,7 +1,7 @@
 import { useState } from "react";
 import '../styles/cart-card.css';
 
-function CartCard({ product, setDeleted, onAlert }) {
+function CartCard({ product, onUpdate, onDelete, onAlert }) {
   const [quantity, setQuantity] = useState(product.quantity);
   const [loadingItemId, setLoadingItemId] = useState(null);
 
@@ -18,6 +18,7 @@ function CartCard({ product, setDeleted, onAlert }) {
       if (itemIndex > -1) {
         cart[itemIndex].quantity = newQuantity;
         localStorage.setItem('cart', JSON.stringify(cart));
+        onUpdate(productId, newQuantity);
         onAlert(200, "Cart updated");
       }
     } catch (err) {
@@ -34,6 +35,7 @@ function CartCard({ product, setDeleted, onAlert }) {
       const cart = JSON.parse(localStorage.getItem('cart') || '[]');
       const updatedCart = cart.filter(item => item.productId !== productId);
       localStorage.setItem('cart', JSON.stringify(updatedCart));
+      onDelete(productId);
       onAlert(200, "Item removed from cart");
     } catch (err) {
       console.error('Error deleting the product:', err);
@@ -47,6 +49,9 @@ function CartCard({ product, setDeleted, onAlert }) {
     const newVal = parseInt(e.target.value, 10);
     if (!isNaN(newVal) && newVal >= 1) {
       setQuantity(newVal);
+      updateCartQuantity(product.product_id, newVal);
+    } else if (newVal === 0) {
+      setQuantity(0);
     }
   };
 

@@ -56,6 +56,16 @@ function Cart() {
     getProducts();
   }, [])
 
+  const handleUpdateQuantity = (productId, newQuantity) => {
+    setProducts(prev => prev.map(p =>
+      p.product_id === productId ? { ...p, quantity: newQuantity } : p
+    ));
+  };
+
+  const handleDeleteItem = (productId) => {
+    setProducts(prev => prev.filter(p => p.product_id !== productId));
+  };
+
   const handleCheckout = () => {
     if (check == 'PROCEED TO CHECKOUT') {
       setCheck("PLACE ORDER")
@@ -85,8 +95,12 @@ function Cart() {
         <div className='d-flex flex-column my-3'>
           {products.map((product) => (
             <div key={product.product_id}>
-              <CartCard product={product}
-                setQuanty={setQuantity} onAlert={handleAlert} />
+              <CartCard
+                product={product}
+                onAlert={handleAlert}
+                onUpdate={handleUpdateQuantity}
+                onDelete={handleDeleteItem}
+              />
             </div>
           ))}
         </div>
