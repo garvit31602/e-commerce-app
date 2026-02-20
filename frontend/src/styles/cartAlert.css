@@ -1,0 +1,8 @@
+.alert{
+    min-width: 300px !important;
+     width: fit-content !important;
+       left: 50%;
+  transform: translate( -50%);
+   z-index: 9999;
+   text-align: center;
+}

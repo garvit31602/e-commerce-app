@@ -1,0 +1,167 @@
+.nav-item{
+    text-transform: uppercase;
+}
+
+.navbar{
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    min-height: 60px;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+div.offcanvas{
+  position:fixed;
+  z-index: 1030
+}
+
+ .offcanvas-backdrop.show { /* the element was .offcanvas-backdrop.fade.show */
+  display: none;
+}
+
+
+.nav-item{
+  cursor: pointer;
+}
+
+h2{
+    font-family: 'Montserrat';
+}
+
+h2{
+    margin-bottom: 0;
+}
+
+nav.navbar{
+    padding-left: 0.5rem;
+    align-items: center;
+    width: 100% !important;
+    max-width: 100% !important;
+    display: flex;
+    margin: 0 !important;
+}
+
+div.container-fluid{
+    padding: 0;
+    width: 100% !important;
+    max-width: 100% !important;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 !important;
+}
+
+
+div.offcanvas{
+    transition: transform 0.3s ease;
+}
+
+
+
+@media (max-width: 400px) {
+  .full-name{
+    font-size: 1.2rem;
+  }
+ 
+  nav.navbar{
+    padding: 0 0 0 1rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+.navbar-toggler{
+  padding-left: 0 !important;
+}
+}
+
+
+@media(max-width:992px){
+.navbar {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+}
+
+.navbar-collapse {
+  display: flex;
+  flex-direction: column;
+}
+li.nav-item{
+    border-style: solid;
+    border-width: 0 0 2px 0;
+}
+ul.navbar-nav {
+    margin-left: 0 !important;
+}
+
+.nav-link{
+    text-decoration: none !important;
+}
+li.nav-item .active {
+  background-color: black;
+  color: white !important;
+}
+.offcanvas-body{
+   padding: 0;
+}
+.offcanvas.offcanvas-end.show {
+    width: 100% !important; /* Use !important to ensure this overrides the default Bootstrap width */
+    right: 0;
+    left: 0;
+    /* You might also want to remove the transform if Bootstrap's JS isn't handling it */
+}
+}
+
+
+@media (min-width:992px){
+.nav-link {
+  position: relative;
+  text-decoration: none;
+}
+
+.navbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100% !important;
+  max-width: 100% !important;
+  z-index: 101;
+  background-color: #f8f9fa;
+  margin: 0 !important;
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: black;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover::before {
+  width: 100%;
+  visibility: visible;
+}
+
+.nav-link.active::before {
+  width: 100%;
+  visibility: visible;
+}
+
+}
+
+.search{
+  font-size: 1.2rem !important;
+  color: black;
+}
+
+.account{
+  font-size: 1rem;
+  font-size: 1rem;
+}
+

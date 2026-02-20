@@ -1,0 +1,37 @@
+.card{
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.hover-zoom {
+  transition: transform 0.3s ease-in-out;
+}
+
+.hover-zoom:hover{
+      transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+}
+
+.card-title{
+     display: -webkit-box;
+  -webkit-line-clamp: 2; /* Limit to 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+   height: 2.4em;               /* 2 lines * line-height */
+  margin-bottom: 0.5rem; 
+}
+
+@media (max-width: 576px) {
+  .card-body{
+    padding-bottom: 0;
+  }
+  .container{
+    padding: 0;
+  }
+  .row{
+    margin: 0;
+    padding: 0;
+  }
+}

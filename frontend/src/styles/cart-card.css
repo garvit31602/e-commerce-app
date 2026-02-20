@@ -1,0 +1,11 @@
+.cart-card{
+    height: 10rem;
+}
+
+.cart-img{
+    height: auto;
+}
+
+.qty{
+    max-width: 80px;
+}

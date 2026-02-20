@@ -1,0 +1,55 @@
+#login{
+    font-family:auto;
+}
+
+
+#box{ 
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.small{
+    cursor: pointer;
+}
+
+.span-sec{
+    height: 10%;
+}
+
+form{
+    width: 20rem;
+}
+
+.alert{
+    margin-top: 10px;
+        position: fixed;
+        width: 100%;
+    }
+
+@media (max-width: 576px) {
+    #box{
+        margin-top: 2rem;
+        height: 20rem;
+    }
+    form{
+        width: 15rem;
+        height: 12rem;
+    }
+    #login{
+        font-size: 1.5rem;
+    }
+    .small{
+        font-size: 0.8rem;
+    }
+}
+
+@media(min-width: 992px){
+    .login{
+         margin-top: 80px;
+         margin-bottom: 0;
+    }   
+}

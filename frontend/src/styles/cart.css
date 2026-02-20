@@ -1,0 +1,48 @@
+.cart{
+    margin-top: 80px;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.payment-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.radio-dot {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2px solid green;
+  transition: background-color 0.2s ease;
+}
+
+input.btn-check:checked + .payment-label .radio-dot {
+  background-color: green;
+}
+
+.cart-summary{
+    margin-left: auto;
+}
+
+.summary{
+    width: 30rem !important;
+}
+
+.flex-fill {
+  flex: 1;
+  margin-top: 80px;
+}
+
+@media (max-width:992px){
+    .cart{
+    margin-top: -10px;
+    }
+}

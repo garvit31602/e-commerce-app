@@ -1,0 +1,101 @@
+.carousel-img{
+    width: 100%;
+    height: auto;
+}
+
+.line {
+  display: inline-block;
+  width: 40px;
+  height: 2px;
+  background-color: black;
+  vertical-align: middle;
+}
+
+.img-div{
+    width: 35rem;
+}
+@media (min-width: 992px){
+.home{
+  margin-top: 80px;
+        margin-left: 7rem;
+    margin-right: 7rem;
+}
+}
+
+.big-title{
+    font-size: 2.5rem;
+}
+
+.policy-sec{
+    padding: 3rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    justify-content: space-between;
+}
+
+.libre-baskerville-regular{
+    font-family: "Libre Baskerville", serif;
+     font-style: normal;
+}
+
+.input-group{
+    height: 3rem;
+    width: 30rem;
+    font-size: 0.1rem;
+}
+
+.input-group input {
+  font-size: 0.9rem;
+}
+
+#button-addon2{
+    font-size: 0.6rem;
+}
+
+.text-block {
+  flex: 2 1 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-div img {
+  height: 100%;
+  object-fit: cover;
+}
+.img-div {
+  flex: 1 1 300px;
+}
+
+
+
+@media(max-width:992px){
+    .home{
+    margin-left: 4rem !important;
+    margin-right: 4rem !important;
+    margin-top: 0 !important;
+    }
+    .policy-sec{
+        flex-direction: column;
+    }
+}
+
+
+@media (max-width: 592px) {
+    .home{
+        margin-left: 1rem !important;
+    margin-right: 1rem !important;
+}
+  .fs-5 {
+    font-size: 0.80rem !important;
+  }
+  .big-title{
+    font-size: 1.5rem;
+}
+div.text-block{
+    margin: auto !important;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+}
