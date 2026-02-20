@@ -51,9 +51,9 @@ function Navbar() {
           </div>
         </div>
         <div className="d-flex align-items-center justify-content-end ms-auto px-2 py-2 px-sm-3 py-sm-3">
-          <div className="nav-item d-flex align-items-center mx-1 mx-sm-2">
+          <Link to="/collections" className="nav-item d-flex align-items-center mx-1 mx-sm-2 text-dark">
             <i className="bi bi-search search"></i>
-          </div>
+          </Link>
           <Link to="/login" className="text-dark text-decoration-none">
             <div className="nav-item d-flex align-items-center mx-1 mx-sm-2">
 

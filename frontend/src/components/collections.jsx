@@ -1,5 +1,6 @@
 import Navbar from "./navbar";
 import { useState, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
 import ProductCard from './productlist'
 import '../styles/collections.css'
 import Footer from "./footer";
@@ -8,7 +9,8 @@ import Papa from "papaparse";
 
 function Collections() {
   const [products, setProducts] = useState([]);
-  const [searchQuery, setSearchQuery] = useState("");
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchQuery, setSearchQuery] = useState(searchParams.get("search") || "");
   const [sortBy, setSortBy] = useState("relevance");
   const [selectedCategories, setSelectedCategories] = useState([]); // ["men", "women", "kids"]
   const [selectedTypes, setSelectedTypes] = useState([]); // ["topwear", "bottomwear", "winterwear"]
@@ -58,6 +60,23 @@ function Collections() {
   useEffect(() => {
     getproducts();
   }, [])
+
+  // Sync searchQuery state with URL search parameters
+  useEffect(() => {
+    const query = searchParams.get("search");
+    if (query !== null) {
+      setSearchQuery(query);
+    }
+  }, [searchParams]);
+
+  // Update URL search parameters when searchQuery changes
+  useEffect(() => {
+    if (searchQuery) {
+      setSearchParams({ search: searchQuery }, { replace: true });
+    } else {
+      setSearchParams({}, { replace: true });
+    }
+  }, [searchQuery]);
 
   // Reset to page 1 when filters or search change
   useEffect(() => {
