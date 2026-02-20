@@ -12,45 +12,32 @@ function ProductCard({ product, onAlert }) {
       img.src = src;
     });
   }, []);
-  const saveCartToBackend = async () => {
+  const saveCartToLocalStorage = () => {
     try {
       setLoading(true);
-      const token = localStorage.getItem('accessToken');
-      console.log('Sending cart request with token:', token); // Debug
-      const response = await fetch('http://localhost:3000/cart', {
-        method: 'POST',
-        headers: {
-          "Content-Type": "application/json",
-          "Authorization": `Bearer ${token}`
-        },
-        body: JSON.stringify({
-          userId: getUserId(),
-          items: [{
-            productId: product.product_id,
-            name: product.product_description,
-            price: Number(product.final_price.replace(/[^\d.]/g, "")),
-            quantity: 1
-          }
-          ]
-        }),
+      const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+      const newItem = {
+        productId: product.product_id,
+        name: product.product_description,
+        price: Number(product.final_price.replace(/[^\d.]/g, "")),
+        quantity: 1,
+        image: product.images[0]
+      };
+
+      const existingItemIndex = cart.findIndex(item => item.productId === newItem.productId);
+      if (existingItemIndex > -1) {
+        cart[existingItemIndex].quantity += 1;
+      } else {
+        cart.push(newItem);
       }
-      );
-      let data;
-      try {
-        data = await response.json(); // safely try to parse
-      } catch {
-        if (response.status === 401) {
-          data = { message: 'Please login first' }
-        }
-        else
-          data = { message: 'Your session has expired. Please log in again.' };
-      }
-      onAlert(response.status, data.message || "Added to cart");
+
+      localStorage.setItem('cart', JSON.stringify(cart));
+      onAlert(201, "Added to cart");
     } catch (err) {
       console.error('Failed to save cart:', err);
-    }
-    finally {
-      setLoading(false)
+      onAlert(500, "Failed to add to cart");
+    } finally {
+      setLoading(false);
     }
   };
   const [index, setIndex] = useState(0);
@@ -69,18 +56,18 @@ function ProductCard({ product, onAlert }) {
     <div className="card px-0 py-0 border border-0">
       <a href={product.url} target="_blank" rel="noopener noreferrer" className="text-decoration-none text-dark">
         <div className="hover-zoom-wrapper rounded overflow-hidden">
-          {/* This is a comment 
-         <button disabled={loading}
-  onClick={(e) => {
-    e.preventDefault();
+          {/*
+          <button disabled={loading}
+            onClick={(e) => {
+              e.preventDefault();
 
-    saveCartToBackend();
-  }}
-  className="btn btn-primary"
->
-   {loading ? 'Saving...' : 'Add to Cart'}
-</button>
-*/}
+              saveCartToLocalStorage();
+            }}
+            className="btn btn-primary"
+          >
+            {loading ? 'Saving...' : 'Add to Cart'}
+          </button>
+          */}
           <div
             onMouseEnter={() => setHovering(true)}
             onMouseLeave={() => {

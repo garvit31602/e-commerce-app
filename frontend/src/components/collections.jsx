@@ -4,6 +4,7 @@ import ProductCard from './productlist'
 import '../styles/collections.css'
 import Footer from "./footer";
 import CartAlert from "./cartAlert";
+import Papa from "papaparse";
 
 function Collections() {
   const [products, setProducts] = useState([]);
@@ -15,24 +16,39 @@ function Collections() {
   const itemsPerPage = 28;
   const getproducts = async () => {
     try {
-      const r = await fetch('http://localhost:3000/products', {
-        method: "GET", headers: {
-          "Content-Type": "application/json"
-        }
-      })
-      let res = await r.json()
-      console.log(res)
-      const allowedCategories = [
-        'shirts', 'tshirts', 'jumpsuit', 'tops', 'jackets', 'skirts', 'sarees', 'kurtas', 'jeans'
-      ];
+      const response = await fetch('/products.csv');
+      const csvData = await response.text();
 
-      const filteredData = res.filter((row) => {
-        if (!row.url) return false;
-        return allowedCategories.some((category) =>
-          row.url.toLowerCase().includes(category)
-        );
+      Papa.parse(csvData, {
+        header: true,
+        dynamicTyping: true,
+        complete: (results) => {
+          const res = results.data.map((row) => {
+            let images = [];
+            try {
+              images = typeof row.images === 'string' ? JSON.parse(row.images) : (row.images || []);
+            } catch {
+              images = [];
+            }
+            return { ...row, images: Array.isArray(images) ? images : [] };
+          });
+
+          const allowedCategories = [
+            'shirts', 'tshirts', 'jumpsuit', 'tops', 'jackets', 'skirts', 'sarees', 'kurtas', 'jeans'
+          ];
+
+          const filteredData = res.filter((row) => {
+            if (!row.url) return false;
+            return allowedCategories.some((category) =>
+              row.url.toLowerCase().includes(category)
+            );
+          });
+          setProducts(filteredData);
+        },
+        error: (error) => {
+          console.error("Error parsing CSV:", error);
+        }
       });
-      setProducts(filteredData)
     }
     catch (error) {
       console.error("Failed to fetch products:", error);
@@ -319,7 +335,7 @@ function Collections() {
           <div>
             <div className="d-flex flex-column flex-md-row align-items-start align-items-md-end justify-content-between px-3 mb-3">
               <div className="w-100 mb-3 mb-md-0">
-                <div className="input-group" style={{ maxWidth: '400px' }}>
+                <div className="input-group my-2" style={{ maxWidth: '400px' }}>
                   <span className="input-group-text bg-white border-end-0">
                     <i className="bi bi-search"></i>
                   </span>
@@ -334,7 +350,7 @@ function Collections() {
                 </div>
               </div>
               <div className="d-flex align-items-center gap-3 mt-5">
-                <div className="dropdown">
+                <div className="dropdown mx-1">
                   <button className="btn btn-outline border dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                     {sortBy === "relevance" && "Sort by"}
                     {sortBy === "price-low-high" && "Price: Low to High"}

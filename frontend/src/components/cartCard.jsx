@@ -6,59 +6,41 @@ function CartCard({ product, setDeleted, onAlert }) {
   const [loadingItemId, setLoadingItemId] = useState(null);
 
   const getUserId = () => {
-  return localStorage.getItem('userId')
-};
+    return localStorage.getItem('userId')
+  };
 
-  const updateCartQuantity = async (productId, newQuantity) => {
+  const updateCartQuantity = (productId, newQuantity) => {
     try {
       setLoadingItemId(productId);
-      const token = localStorage.getItem('accessToken');
-      const response = await fetch('http://localhost:3000/cart', {
-        method: 'POST',
-        headers: {
-          "Content-Type": "application/json",
-          "Authorization": `Bearer ${token}`
-        },
-        body: JSON.stringify({
-          userId: getUserId(),
-          items: [{
-            productId,
-            name: product.product_description,
-            price: Number(product.final_price.replace(/[^\d.]/g, "")),
-            quantity: newQuantity
-          }]
-        })
-      });
-      let data;
-  try {
-    data = await response.json(); // safely try to parse
-  } catch {
-    if(response.status===401){
-     data= {message:'Please login first'}
-    }
-    else
-    data = {message:'Your session has expired. Please log in again.'};
-  }
-      onAlert(response.status, data.message || "Cart updated");
+      const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+      const itemIndex = cart.findIndex(item => item.productId === productId);
+
+      if (itemIndex > -1) {
+        cart[itemIndex].quantity = newQuantity;
+        localStorage.setItem('cart', JSON.stringify(cart));
+        onAlert(200, "Cart updated");
+      }
     } catch (err) {
       console.error('Update error:', err);
+      onAlert(500, "Failed to update cart");
     } finally {
       setLoadingItemId(null);
     }
   };
 
-  const deleteFromBackend = async (productId) => {
+  const deleteFromLocalStorage = (productId) => {
     try {
       setLoadingItemId(productId);
-      const userId = localStorage.getItem('userId');
-      const res = await fetch(`http://localhost:3000/cart/${userId}/${productId}`, {
-        method: 'DELETE'
-      });
-      const data = await res.json();
-      onAlert(res.status, data.message);
+      const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+      const updatedCart = cart.filter(item => item.productId !== productId);
+      localStorage.setItem('cart', JSON.stringify(updatedCart));
+      onAlert(200, "Item removed from cart");
     } catch (err) {
-      console.log('Error deleting the product:', err);
-    } 
+      console.error('Error deleting the product:', err);
+      onAlert(500, "Failed to remove item");
+    } finally {
+      setLoadingItemId(null);
+    }
   };
 
   const handleInputChange = (e) => {
@@ -70,7 +52,7 @@ function CartCard({ product, setDeleted, onAlert }) {
 
   const handleBlur = () => {
     if (quantity === 0) {
-      deleteFromBackend(product.product_id);
+      deleteFromLocalStorage(product.product_id);
     } else if (quantity !== product.quantity) {
       updateCartQuantity(product.product_id, quantity);
     }
@@ -107,7 +89,7 @@ function CartCard({ product, setDeleted, onAlert }) {
           <button
             onClick={(e) => {
               e.preventDefault();
-              deleteFromBackend(product.product_id);
+              deleteFromLocalStorage(product.product_id);
             }}
             className="ms-auto bg-white border-0 p-1 rounded"
           >
